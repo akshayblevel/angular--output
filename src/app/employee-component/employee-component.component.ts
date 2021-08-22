@@ -13,6 +13,8 @@ export class EmployeeComponentComponent implements OnInit {
     this.listFilter = 'Patel';
   }
 
+  pageTitle: string = 'Employee List';
+
   private _listFilter: string = '';
 
   get listFilter(): string {
@@ -55,5 +57,9 @@ export class EmployeeComponentComponent implements OnInit {
     return this.employees.filter((employee: IEmployee) =>
       employee.name.toLocaleLowerCase().includes(filterBy)
     );
+  }
+
+  onRatingClicked(message: string): void {
+    this.pageTitle = 'Employee List ' + message;
   }
 }

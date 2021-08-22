@@ -1,5 +1,8 @@
 <div>
   <div>
+    {{pageTitle}}
+  </div>
+  <div>
     <input type="text" [(ngModel)]="listFilter" />
   </div>
   <br />
@@ -20,7 +23,12 @@
         <td>{{employee.code}}</td>
         <td>{{employee.name}}</td>
         <td>{{employee.salary}}</td>
-        <td><app-star [rating]="employee.starRating"></app-star></td>
+        <td>
+          <app-star
+            [rating]="employee.starRating"
+            (ratingClicked)="onRatingClicked($event)"
+          ></app-star>
+        </td>
       </tr>
     </table>
   </div>
