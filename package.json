@@ -11,6 +11,9 @@
     "@angular/platform-browser": "^12.1.0",
     "@angular/platform-browser-dynamic": "^12.1.0",
     "@angular/router": "^12.1.0",
+    "@popperjs/core": "^2.9.3",
+    "bootstrap": "^5.1.0",
+    "font-awesome": "^4.7.0",
     "rxjs": "^7.1.0",
     "tslib": "^2.3.0",
     "zone.js": "^0.11.4"

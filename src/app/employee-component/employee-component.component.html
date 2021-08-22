@@ -1,0 +1,27 @@
+<div>
+  <div>
+    <input type="text" [(ngModel)]="listFilter" />
+  </div>
+  <br />
+  <div>
+    Filter By: {{listFilter}}
+  </div>
+  <div>
+    <table>
+      <thead>
+        <td>Id</td>
+        <td>Code</td>
+        <td>Name</td>
+        <td>Salary</td>
+        <td>Rating</td>
+      </thead>
+      <tr *ngFor="let employee of filteredEmployees">
+        <td>{{employee.id}}</td>
+        <td>{{employee.code}}</td>
+        <td>{{employee.name}}</td>
+        <td>{{employee.salary}}</td>
+        <td><app-star [rating]="employee.starRating"></app-star></td>
+      </tr>
+    </table>
+  </div>
+</div>
